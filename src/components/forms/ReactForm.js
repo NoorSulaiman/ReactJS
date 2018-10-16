@@ -38,45 +38,44 @@ class ReactForm extends Component {
     render() {
         const { data } = this.state;
         return (
-            React.createElement('form', { onSubmit: this.onSubmit },
-                React.createElement('fieldset', null,
-                    React.createElement('input', {
-                        type: 'text',
-                        id: "tagName",
-                        name: "tagName",
-                        placeholder: "tagName",
-                        value: data.tagName,
-                        onChange: this.onChange
-                    }),
-                    React.createElement('input', {
-                        type: 'text',
-                        id: "propName",
-                        name: "propName",
-                        placeholder: "propName",
-                        value: data.propName,
-                        onChange: this.onChange
-                    }),
-                    React.createElement('input', {
-                        type: 'text',
-                        id: "propValue",
-                        name: "propValue",
-                        placeholder: "propValue",
-                        value: data.propValue,
-                        onChange: this.onChange
-                    }),
-                    React.createElement('input', {
-                        type: 'text',
-                        id: "children",
-                        name: "children",
-                        placeholder: "children",
-                        value: data.children,
-                        onChange: this.onChange
-                    }),
-                    React.createElement('input', {
-                        type: 'submit',
-                        value: "Submit",
-                    }, "Render"),
-                )
+            React.createElement('form', { onSubmit: this.onSubmit, id: 'form' },
+                React.createElement('input', {
+                    type: 'text',
+                    id: "tagName",
+                    name: "tagName",
+                    placeholder: "tagName",
+                    value: data.tagName,
+                    onChange: this.onChange
+                }),
+                React.createElement('input', {
+                    type: 'text',
+                    id: "propName",
+                    name: "propName",
+                    placeholder: "propName",
+                    value: data.propName,
+                    onChange: this.onChange
+                }),
+                React.createElement('input', {
+                    type: 'text',
+                    id: "propValue",
+                    name: "propValue",
+                    placeholder: "propValue",
+                    value: data.propValue,
+                    onChange: this.onChange
+                }),
+                React.createElement('input', {
+                    type: 'text',
+                    id: "children",
+                    name: "children",
+                    placeholder: "children",
+                    value: data.children,
+                    onChange: this.onChange
+                }),
+                React.createElement('input', {
+                    id: 'submit',
+                    type: 'submit',
+                    value: "Render",
+                }),
 
             )
         );

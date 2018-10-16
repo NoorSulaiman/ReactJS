@@ -19,7 +19,9 @@ class RenderPage extends Component {
     render() {
         return (
 
-            React.createElement('div', null, React.createElement(ReactForm, { submit: this.submit }),
+            React.createElement('div', null,
+                React.createElement(ReactForm, { submit: this.submit }),
+                React.createElement('hr', null),
                 ...this.state.data.map(item =>
                     React.createElement(item.tagName, { [item.propName]: item.propValue }, item.children)
                 )
